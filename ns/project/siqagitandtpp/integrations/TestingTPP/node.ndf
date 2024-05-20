@@ -45,9 +45,8 @@
   <value name="retry_max">0</value>
   <value name="retry_interval">0</value>
   <record name="node_hints" javaclass="com.wm.util.Values">
-    <value name="createdBy">testuser</value>
-    <value name="createdDate">1716195342181</value>
-    <value name="lastModifiedDate">1716195342181</value>
+    <value name="lastModifiedBy">testuser</value>
+    <value name="lastModifiedDate">1716198958233</value>
     <value name="displayName">TestingTPP</value>
     <value name="description"></value>
     <record name="stepNodeHints" javaclass="com.wm.util.Values">
@@ -66,8 +65,15 @@
         </record>
         <null name="outputMapSet"/>
         <null name="mapSet"/>
+        <Boolean name="serviceReferenceResolved">true</Boolean>
+        <value name="nodePathForDebug">0</value>
       </record>
       <record name="/1" javaclass="com.wm.util.Values">
+        <value name="itemType">ALL</value>
+        <value name="name">NEW</value>
+        <value name="nodePathForDebug">1</value>
+      </record>
+      <record name="/2" javaclass="com.wm.util.Values">
         <value name="itemType">ALL</value>
         <value name="name">NEW</value>
       </record>
