@@ -11,6 +11,7 @@ packages:
   wpmServer: https://packages.webmethods.io
   wpmRegistry: softwareag
 - name: SIQA_OriginTest_OnPremAssets
+  version: "1.0"
   gitServerName: vidi
   gitUrl: https://github.com/vijetadixit
   gitUsername: vijetadixit
@@ -40,6 +41,64 @@ services:
   packages:
   - name: SIQAGitAndTPPProject
     version: "1.0"
+- serviceName: project.siqagitandtpp.integrations:TestingTPP
+  packages:
+  - name: SIQAGitAndTPPProject
+    version: "1.0"
+  - name: SIQA_OriginTest_OnPremAssets
+    version: "1.0"
+- serviceName: Basics_1:ComplexFS
+  packages:
+  - name: SIQA_OriginTest_OnPremAssets
+    version: "1.0"
+- serviceName: Basics_1:Basic_Flow
+  packages:
+  - name: SIQA_OriginTest_OnPremAssets
+    version: "1.0"
+- serviceName: pub.math:divideInts
+  packages:
+  - name: WmPublic
+    version: 11.0.0.0.890
+- serviceName: pub.math:subtractInts
+  packages:
+  - name: WmPublic
+    version: 11.0.0.0.890
+- serviceName: pub.math:multiplyIntList
+  packages:
+  - name: WmPublic
+    version: 11.0.0.0.890
+- serviceName: Basics_1:mapservice
+  packages:
+  - name: SIQA_OriginTest_OnPremAssets
+    version: "1.0"
+- serviceName: Basics_1:TryCatch
+  packages:
+  - name: SIQA_OriginTest_OnPremAssets
+    version: "1.0"
+- serviceName: Map_1:TestFlow
+  packages:
+  - name: SIQA_OriginTest_OnPremAssets
+    version: "1.0"
+- serviceName: REST_1_1.CurrentDateAndTime:_get
+  packages:
+  - name: SIQA_OriginTest_OnPremAssets
+    version: "1.0"
+- serviceName: pub.date:getCurrentDate
+  packages:
+  - name: WmPublic
+    version: 11.0.0.0.890
+- serviceName: pub.string:objectToString
+  packages:
+  - name: WmPublic
+    version: 11.0.0.0.890
+- serviceName: pub.flow:debugLog
+  packages:
+  - name: WmPublic
+    version: 11.0.0.0.890
+- serviceName: SOAP_1_1:showDateAndTime
+  packages:
+  - name: SIQA_OriginTest_OnPremAssets
+    version: "1.0"
 configurationVariables:
   ? artConnection.SIQAGitAndTPPProject.project.siqagitandtpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.DatabaseNewAccount.connectionSettings.otherProperties
   : loginTimeout=60;driverType=thin;
@@ -47,43 +106,43 @@ configurationVariables:
   : sa
   ? artConnection.SIQAGitAndTPPProject.project.siqagitandtpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.DatabaseNewAccount.connectionManagerSettings.startupBackoffSecs
   : "10"
-  ? artConnection.SIQAGitAndTPPProject.project.siqagitandtpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.DatabaseNewAccount.connectionManagerSettings.minimumPoolSize
-  : "1"
   ? artConnection.SIQAGitAndTPPProject.project.siqagitandtpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.DatabaseNewAccount.connectionSettings.databaseName
   : SIQACloud
-  ? artConnection.SIQAGitAndTPPProject.project.siqagitandtpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.DatabaseNewAccount.connectionManagerSettings.maximumPoolSize
-  : "20"
   ? artConnection.SIQAGitAndTPPProject.project.siqagitandtpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.DatabaseNewAccount.connectionSettings.transactionType
   : LOCAL_TRANSACTION
-  ? artConnection.SIQAGitAndTPPProject.project.siqagitandtpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.DatabaseNewAccount.connectionSettings.driverType
-  : Progress® DataDirect®
-  ? artConnection.SIQAGitAndTPPProject.project.siqagitandtpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.DatabaseNewAccount.connectionManagerSettings.heartBeatInterval
-  : "0"
-  ? artConnection.SIQAGitAndTPPProject.project.siqagitandtpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.DatabaseNewAccount.connectionSettings.portNumber
-  : "1433"
-  ? artConnection.SIQAGitAndTPPProject.project.siqagitandtpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.DatabaseNewAccount.connectionSettings.keyStore
-  : ""
   ? artConnection.SIQAGitAndTPPProject.project.siqagitandtpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.DatabaseNewAccount.connectionSettings.serverName
   : vmiboint01
-  ? artConnection.SIQAGitAndTPPProject.project.siqagitandtpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.DatabaseNewAccount.connectionEnabled
-  : "false"
   ? artConnection.SIQAGitAndTPPProject.project.siqagitandtpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.DatabaseNewAccount.connectionSettings.dbType
   : MSSQL
   ? artConnection.SIQAGitAndTPPProject.project.siqagitandtpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.DatabaseNewAccount.connectionManagerSettings.blockingTimeout
   : "5000"
-  ? artConnection.SIQAGitAndTPPProject.project.siqagitandtpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.DatabaseNewAccount.connectionSettings.datasourceClass
-  : com.wm.dd.jdbcx.sqlserver.SQLServerDataSource
-  ? artConnection.SIQAGitAndTPPProject.project.siqagitandtpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.DatabaseNewAccount.connectionSettings.trustStore
-  : ""
-  ? artConnection.SIQAGitAndTPPProject.project.siqagitandtpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.DatabaseNewAccount.connectionSettings.networkProtocol
-  : tcp
   ? artConnection.SIQAGitAndTPPProject.project.siqagitandtpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.DatabaseNewAccount.connectionManagerSettings.poolable
   : "false"
   ? artConnection.SIQAGitAndTPPProject.project.siqagitandtpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.DatabaseNewAccount.connectionSettings.password
   : "{AES}B2Xqma4Ost5nVUiXctJydQ=="
   ? artConnection.SIQAGitAndTPPProject.project.siqagitandtpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.DatabaseNewAccount.connectionManagerSettings.poolIncrementSize
   : "1"
-  ? artConnection.SIQAGitAndTPPProject.project.siqagitandtpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.DatabaseNewAccount.connectionManagerSettings.startupRetryCount
-  : "0"
   ? artConnection.SIQAGitAndTPPProject.project.siqagitandtpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.DatabaseNewAccount.connectionManagerSettings.expireTimeout
   : "5000"
+  ? artConnection.SIQAGitAndTPPProject.project.siqagitandtpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.DatabaseNewAccount.connectionManagerSettings.minimumPoolSize
+  : "1"
+  ? artConnection.SIQAGitAndTPPProject.project.siqagitandtpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.DatabaseNewAccount.connectionSettings.keyStore
+  : ""
+  ? artConnection.SIQAGitAndTPPProject.project.siqagitandtpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.DatabaseNewAccount.connectionEnabled
+  : "false"
+  ? artConnection.SIQAGitAndTPPProject.project.siqagitandtpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.DatabaseNewAccount.connectionManagerSettings.maximumPoolSize
+  : "20"
+  ? artConnection.SIQAGitAndTPPProject.project.siqagitandtpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.DatabaseNewAccount.connectionSettings.driverType
+  : Progress® DataDirect®
+  ? artConnection.SIQAGitAndTPPProject.project.siqagitandtpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.DatabaseNewAccount.connectionManagerSettings.heartBeatInterval
+  : "0"
+  ? artConnection.SIQAGitAndTPPProject.project.siqagitandtpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.DatabaseNewAccount.connectionSettings.portNumber
+  : "1433"
+  ? artConnection.SIQAGitAndTPPProject.project.siqagitandtpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.DatabaseNewAccount.connectionSettings.trustStore
+  : ""
+  ? artConnection.SIQAGitAndTPPProject.project.siqagitandtpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.DatabaseNewAccount.connectionSettings.networkProtocol
+  : tcp
+  ? artConnection.SIQAGitAndTPPProject.project.siqagitandtpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.DatabaseNewAccount.connectionSettings.datasourceClass
+  : com.wm.dd.jdbcx.sqlserver.SQLServerDataSource
+  ? artConnection.SIQAGitAndTPPProject.project.siqagitandtpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.DatabaseNewAccount.connectionManagerSettings.startupRetryCount
+  : "0"
