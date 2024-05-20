@@ -10,6 +10,11 @@ packages:
 - name: WmJDBCAdapter
   wpmServer: https://packages.webmethods.io
   wpmRegistry: softwareag
+- name: SIQA_OriginTest_OnPremAssets
+  gitServerName: vidi
+  gitUrl: https://github.com/vijetadixit
+  gitUsername: vijetadixit
+  gitBranch: Test
 services:
 - serviceName: project.siqagitandtpp.integrations:GitSyncTest
   packages:
@@ -31,6 +36,10 @@ services:
   packages:
   - name: SIQAGitAndTPPProject
     version: "1.0"
+- serviceName: project.siqagitandtpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.operations.actions:DBNewInsert
+  packages:
+  - name: SIQAGitAndTPPProject
+    version: "1.0"
 configurationVariables:
   ? artConnection.SIQAGitAndTPPProject.project.siqagitandtpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.DatabaseNewAccount.connectionSettings.otherProperties
   : loginTimeout=60;driverType=thin;
@@ -38,43 +47,43 @@ configurationVariables:
   : sa
   ? artConnection.SIQAGitAndTPPProject.project.siqagitandtpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.DatabaseNewAccount.connectionManagerSettings.startupBackoffSecs
   : "10"
-  ? artConnection.SIQAGitAndTPPProject.project.siqagitandtpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.DatabaseNewAccount.connectionSettings.databaseName
-  : SIQACloud
-  ? artConnection.SIQAGitAndTPPProject.project.siqagitandtpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.DatabaseNewAccount.connectionSettings.transactionType
-  : LOCAL_TRANSACTION
-  ? artConnection.SIQAGitAndTPPProject.project.siqagitandtpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.DatabaseNewAccount.connectionSettings.serverName
-  : vmiboint01
-  ? artConnection.SIQAGitAndTPPProject.project.siqagitandtpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.DatabaseNewAccount.connectionSettings.dbType
-  : MSSQL
-  ? artConnection.SIQAGitAndTPPProject.project.siqagitandtpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.DatabaseNewAccount.connectionManagerSettings.blockingTimeout
-  : "5000"
-  ? artConnection.SIQAGitAndTPPProject.project.siqagitandtpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.DatabaseNewAccount.connectionManagerSettings.poolable
-  : "false"
-  ? artConnection.SIQAGitAndTPPProject.project.siqagitandtpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.DatabaseNewAccount.connectionSettings.password
-  : "{AES}B2Xqma4Ost5nVUiXctJydQ=="
-  ? artConnection.SIQAGitAndTPPProject.project.siqagitandtpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.DatabaseNewAccount.connectionManagerSettings.poolIncrementSize
-  : "1"
-  ? artConnection.SIQAGitAndTPPProject.project.siqagitandtpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.DatabaseNewAccount.connectionManagerSettings.expireTimeout
-  : "5000"
   ? artConnection.SIQAGitAndTPPProject.project.siqagitandtpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.DatabaseNewAccount.connectionManagerSettings.minimumPoolSize
   : "1"
-  ? artConnection.SIQAGitAndTPPProject.project.siqagitandtpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.DatabaseNewAccount.connectionSettings.keyStore
-  : ""
-  ? artConnection.SIQAGitAndTPPProject.project.siqagitandtpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.DatabaseNewAccount.connectionEnabled
-  : "false"
+  ? artConnection.SIQAGitAndTPPProject.project.siqagitandtpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.DatabaseNewAccount.connectionSettings.databaseName
+  : SIQACloud
   ? artConnection.SIQAGitAndTPPProject.project.siqagitandtpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.DatabaseNewAccount.connectionManagerSettings.maximumPoolSize
   : "20"
+  ? artConnection.SIQAGitAndTPPProject.project.siqagitandtpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.DatabaseNewAccount.connectionSettings.transactionType
+  : LOCAL_TRANSACTION
   ? artConnection.SIQAGitAndTPPProject.project.siqagitandtpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.DatabaseNewAccount.connectionSettings.driverType
   : Progress® DataDirect®
   ? artConnection.SIQAGitAndTPPProject.project.siqagitandtpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.DatabaseNewAccount.connectionManagerSettings.heartBeatInterval
   : "0"
   ? artConnection.SIQAGitAndTPPProject.project.siqagitandtpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.DatabaseNewAccount.connectionSettings.portNumber
   : "1433"
+  ? artConnection.SIQAGitAndTPPProject.project.siqagitandtpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.DatabaseNewAccount.connectionSettings.keyStore
+  : ""
+  ? artConnection.SIQAGitAndTPPProject.project.siqagitandtpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.DatabaseNewAccount.connectionSettings.serverName
+  : vmiboint01
+  ? artConnection.SIQAGitAndTPPProject.project.siqagitandtpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.DatabaseNewAccount.connectionEnabled
+  : "false"
+  ? artConnection.SIQAGitAndTPPProject.project.siqagitandtpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.DatabaseNewAccount.connectionSettings.dbType
+  : MSSQL
+  ? artConnection.SIQAGitAndTPPProject.project.siqagitandtpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.DatabaseNewAccount.connectionManagerSettings.blockingTimeout
+  : "5000"
+  ? artConnection.SIQAGitAndTPPProject.project.siqagitandtpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.DatabaseNewAccount.connectionSettings.datasourceClass
+  : com.wm.dd.jdbcx.sqlserver.SQLServerDataSource
   ? artConnection.SIQAGitAndTPPProject.project.siqagitandtpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.DatabaseNewAccount.connectionSettings.trustStore
   : ""
   ? artConnection.SIQAGitAndTPPProject.project.siqagitandtpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.DatabaseNewAccount.connectionSettings.networkProtocol
   : tcp
-  ? artConnection.SIQAGitAndTPPProject.project.siqagitandtpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.DatabaseNewAccount.connectionSettings.datasourceClass
-  : com.wm.dd.jdbcx.sqlserver.SQLServerDataSource
+  ? artConnection.SIQAGitAndTPPProject.project.siqagitandtpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.DatabaseNewAccount.connectionManagerSettings.poolable
+  : "false"
+  ? artConnection.SIQAGitAndTPPProject.project.siqagitandtpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.DatabaseNewAccount.connectionSettings.password
+  : "{AES}B2Xqma4Ost5nVUiXctJydQ=="
+  ? artConnection.SIQAGitAndTPPProject.project.siqagitandtpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.DatabaseNewAccount.connectionManagerSettings.poolIncrementSize
+  : "1"
   ? artConnection.SIQAGitAndTPPProject.project.siqagitandtpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.DatabaseNewAccount.connectionManagerSettings.startupRetryCount
   : "0"
+  ? artConnection.SIQAGitAndTPPProject.project.siqagitandtpp.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.DatabaseNewAccount.connectionManagerSettings.expireTimeout
+  : "5000"
